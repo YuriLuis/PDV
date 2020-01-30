@@ -1,4 +1,4 @@
-package com.example.pdv.controller;
+package com.example.pdv.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,12 +14,12 @@ import com.example.pdv.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHoler> {
+public class AdapterCliente extends RecyclerView.Adapter<AdapterCliente.MyViewHoler> {
 
     private List<Cliente> clientes = new ArrayList<>();
 
 
-    public Adapter(List<Cliente> fillmes){
+    public AdapterCliente(List<Cliente> fillmes){
 
         this.clientes = fillmes;
     }
@@ -31,7 +31,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.MyViewHoler> {
     @Override
     public MyViewHoler onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemDaLista = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.activity_main, parent, false); // layout|cardView onde esta as dados para listagem
+                .inflate(R.layout.activity_cliente, parent, false); // layout|cardView onde esta as dados para listagem
 
         return new MyViewHoler(itemDaLista);
     }

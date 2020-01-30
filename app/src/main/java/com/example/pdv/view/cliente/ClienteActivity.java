@@ -1,4 +1,4 @@
-package com.example.pdv.view;
+package com.example.pdv.view.cliente;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,7 +32,11 @@ public class ClienteActivity extends AppCompatActivity {
 
     public void instaciaLayout(){
         recyclerView = findViewById(R.id.recyclerViewClientes);
-        controllerCliente.criaCliente();
+
+        if (controllerCliente.getClientes().isEmpty()){
+
+        }
+
         this.listaDeClientes = controllerCliente.getClientes();
     }
 

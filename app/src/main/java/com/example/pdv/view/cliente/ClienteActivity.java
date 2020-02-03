@@ -12,6 +12,8 @@ import com.example.pdv.controller.ControllerCliente;
 import com.example.pdv.model.Cliente;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ClienteActivity extends AppCompatActivity {
@@ -38,11 +40,15 @@ public class ClienteActivity extends AppCompatActivity {
         }
 
         this.listaDeClientes = controllerCliente.getClientes();
+
     }
 
     public AdapterCliente configurarAdapter(){
 
+
         AdapterCliente adapter = new AdapterCliente( listaDeClientes );
+
+
 
         return adapter;
     }

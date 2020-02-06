@@ -16,7 +16,7 @@ import com.example.pdv.view.MainActivity;
 
 public class CadastroClienteActivity extends AppCompatActivity {
 
-    private EditText etNomeCliente;
+    private EditText etNomeCliente, et;
     private Button btnCadastrar;
 
     @Override

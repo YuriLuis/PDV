@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
 
@@ -31,19 +32,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+
+                >
 
                 <RadioButton
                     android:id="@+id/rbFisica"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pessoa Física" />
+                    android:checked="false"
+                    android:text="Pessoa Física"
+                    android:textColorLink="@color/colorPrimaryDark"
+                    style="@style/corRadioGroupSelecionado"
+                    />
 
                 <RadioButton
                     android:id="@+id/rbJuridica"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pessoa Jurídica" />
+                    android:text="Pessoa Jurídica"
+                    style="@style/corRadioGroupSelecionado"
+                    />
             </RadioGroup>
 
         </LinearLayout>
@@ -57,14 +66,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:hint="Nome">
+                android:hint="Nome"
+                style="@style/corTextInput"
+                app:startIconDrawable="@drawable/ic_person_black_24dp"
+
+
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etNomeCliente"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -72,7 +88,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:hint="CPF ou CNPJ">
+                android:hint="CPF ou CNPJ"
+                style="@style/corTextInput"
+                app:startIconDrawable="@drawable/ic_person_black_24dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etCpfOuCnpj"
@@ -86,16 +105,12 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="130dp"
+                    style="@style/corTextInput"
+                    android:layout_width="140dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:hint="Cep">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp" />
-
+                    android:hint="Cep"
+                    app:startIconDrawable="@drawable/ic_location_on_black_24dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etCep"
@@ -109,14 +124,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
-                    android:hint="Endereço">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:hint="Endereço" />
-
+                    android:hint="Endereço"
+                    style="@style/corTextInput"
+                    app:startIconDrawable="@drawable/ic_location_on_black_24dp"
+                    >
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/etEndereco"
@@ -132,14 +143,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:hint="Bairro">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:hint="Endereço" />
-
+                android:hint="Bairro"
+                style="@style/corTextInput"
+                app:startIconDrawable="@drawable/ic_location_on_black_24dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etBairro"
@@ -153,14 +160,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:hint="Cidade">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:hint="Endereço" />
-
+                android:hint="Cidade"
+                style="@style/corTextInput"
+                app:startIconDrawable="@drawable/ic_location_on_black_24dp"
+                >
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etCidade"
@@ -174,13 +177,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:hint="Estado">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:hint="Endereço" />
+                android:hint="Estado"
+                style="@style/corTextInput"
+                app:startIconDrawable="@drawable/ic_location_on_black_24dp"
+                >
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -189,69 +189,62 @@
                     android:layout_height="wrap_content"
                     android:inputType="text"
                     android:maxLines="1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/corTextInput"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:hint="Número"
+                        app:startIconDrawable="@drawable/ic_location_on_black_24dp">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp" />
+
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNumero"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/corTextInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:hint="Fone"
+                        app:startIconDrawable="@drawable/ic_local_phone_black_24dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etFone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="130dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:hint="Número">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp" />
-
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etNumero"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="4dp"
-                    android:hint="Fone">
-
-                    <com.google.android.material.textfield.TextInputLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="4dp"
-                        android:hint="Endereço" />
-
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/etFone"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="text"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
-                android:hint="Email">
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="4dp"
-                    android:hint="Endereço" >
-
-                </com.google.android.material.textfield.TextInputLayout>
+                android:hint="Email"
+                style="@style/corTextInput"
+                app:startIconDrawable="@drawable/ic_email_black_24dp"
+                >
 
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -261,12 +254,27 @@
                     android:inputType="text"
                     android:maxLines="1" />
 
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/cddBlumenau" />
+
             </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:id="@+id/spinner"
+                style="@style/corTextInput"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:entries="@array/cddBlumenau" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/floatingActionButton"
+                style="@style/corBotaoApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Adicionar"
+                app:icon="@drawable/ic_botao_add_24dp"
+                app:iconPadding="4dp"
+                app:srcCompat="@android:color/darker_gray"
+                />
 
 
         </LinearLayout>

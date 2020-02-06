@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="corBotaoApp" parent="Widget.MaterialComponents.ExtendedFloatingActionButton">
+        <item name="android:backgroundTint">@color/mtrl_textinput_default_box_stroke_color</item>
+        <item name="android:textColor">@color/cor_text_do_input_layout</item>
+        <item name="android:iconTint">@color/cor_text_do_input_layout</item>
+    </style>
+</resources>

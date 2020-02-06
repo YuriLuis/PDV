@@ -48,8 +48,6 @@ public class ClienteActivity extends AppCompatActivity {
 
         AdapterCliente adapter = new AdapterCliente( listaDeClientes );
 
-
-
         return adapter;
     }
 
